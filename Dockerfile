@@ -8,6 +8,7 @@ RUN set -eux; \
         alpine-sdk \
         bash \
         libffi-dev \
+        openssh \
     ; \
     git lfs install;
 COPY entrypoint.sh /entrypoint.sh

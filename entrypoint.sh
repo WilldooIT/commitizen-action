@@ -25,6 +25,8 @@ echo "Git email: $(git config --get user.email)"
 PIP_CMD=('pip' 'install')
 if [[ $INPUT_COMMITIZEN_VERSION == 'latest' ]]; then
   PIP_CMD+=('commitizen')
+elif [[ $INPUT_COMMITIZEN_VERSION == 'custom' ]]; then
+  true
 else
   PIP_CMD+=("commitizen==${INPUT_COMMITIZEN_VERSION}")
 fi
